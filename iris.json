@@ -1,0 +1,19 @@
+{
+  "pipeline": {
+    "name": "iris_classifier"
+  },
+  "input": {
+    "atom": {
+      "glob": "/raw/*",
+      "repo": "iris"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/bash",
+      "-c",
+      "/opt/hackathon_ds_to_prod/runit.sh"
+    ],
+    "image": "gerbeno/iris:1536754068"
+  }
+}

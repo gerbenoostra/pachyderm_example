@@ -1,5 +1,5 @@
-all: requirements model finaldataset
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
+all: requirements model finaldataset docker
+.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3 pachypipeline
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -71,6 +71,14 @@ test_environment:
 #finaldataset: data/processed/dataset.csv
 
 model: requirements models/model.p
+
+TIME=$(shell date +%s)
+docker: Dockerfile environment.yml runit.sh
+	docker build . --tag gerbeno/iris:$(TIME)
+	docker push gerbeno/iris:$(TIME)
+
+pachypipeline:
+	pachctl update-pipeline -f iris.json
 
 #################################################################################
 # PROJECT RULES                                                                 #
