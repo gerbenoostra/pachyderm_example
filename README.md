@@ -1,4 +1,4 @@
-hackathon_ds_to_prod
+Pachyderm example
 ==============================
 
 An example project used to test how Pachyderm works, resulting in the following [Blogpost on medium](https://medium.com/bigdatarepublic/pachyderm-for-data-scientists-d1d1dff3a2fa)
@@ -28,8 +28,6 @@ Project Organization
     │   │   │                 predictions
     │   │   ├── predict_model.py
     │   │   └── train_model.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
 
 --------
