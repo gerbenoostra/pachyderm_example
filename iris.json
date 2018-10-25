@@ -14,6 +14,6 @@
       "-c",
       "/opt/hackathon_ds_to_prod/runit.sh"
     ],
-    "image": "gerbeno/iris:1536754068"
+    "image": "gerbeno/iris:1538732911"
   }
 }
