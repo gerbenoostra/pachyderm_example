@@ -10,8 +10,12 @@ setup(
     long_description="README.md",
     python_requires='>3.5',
     install_requires=[
-                     "click",
-                     "python-dotenv>=0.5.1",
+        "click",
+        "python-dotenv>=0.5.1",
+        "NumPy>=1.6.1",
+        "SciPy>=0.9",
+        "scikit-learn>=0.18",
+        "pandas",
     ],
     setup_requires=["pytest-runner"],
     tests_require=["pytest"]
